@@ -1,38 +1,19 @@
 {
-  "header": {
-    "nav": {
-      "links": [
-        { "name": "Home", "href": "#home" },
-        { "name": "About", "href": "#about" },
-        { "name": "Contact", "href": "#contact" }
+  "name": "Landing Page Development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "forwardPorts": [
+    3000
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "javascript.validate.enable": true
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
       ]
     }
   },
-  "main": {
-    "sections": [
-      {
-        "id": "home",
-        "title": "Welcome to Our Landing Page",
-        "content": "Discover our amazing services and features.",
-        "button": {
-          "id": "learnMoreBtn",
-          "text": "Learn More"
-        }
-      },
-      {
-        "id": "about",
-        "title": "About Us",
-        "content": "We are committed to providing the best service.",
-        "hidden": true
-      },
-      {
-        "id": "contact",
-        "title": "Contact Us",
-        "content": "Email us at info@example.com",
-        "hidden": true
-      }
-    ]
-  },
-  "footer": {
-    "content": "&copy; 2024 Landing Page. All rights reserved."
-  }
+  "postCreateCommand": "npm install"
+}
